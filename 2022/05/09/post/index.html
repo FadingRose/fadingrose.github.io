@@ -20,28 +20,33 @@
     var CONFIG = {"hostname":"fadingrose.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://fadingrose.github.io/index.html">
+  <meta name="description" content="简报这是一个关于Go-callvis安装的踩坑记录，虽然最终的原因已经和这个插件没关系了（ 发生了什么？Go-callvis本身是一个Go实现的生成函数调用图的插件，根据Github上的Quick Start指引，源代码下面有一个Makefile文件，借助这个文件来完成安装 要求在go-callvis的源代码文件夹下执行 make install，此时的文件结构树有个这个东西 奇怪的地方出现了，执">
+<meta property="og:type" content="article">
+<meta property="og:title" content="post">
+<meta property="og:url" content="https://fadingrose.github.io/2022/05/09/post/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="简报这是一个关于Go-callvis安装的踩坑记录，虽然最终的原因已经和这个插件没关系了（ 发生了什么？Go-callvis本身是一个Go实现的生成函数调用图的插件，根据Github上的Quick Start指引，源代码下面有一个Makefile文件，借助这个文件来完成安装 要求在go-callvis的源代码文件夹下执行 make install，此时的文件结构树有个这个东西 奇怪的地方出现了，执">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-05-09T06:49:26.000Z">
+<meta property="article:modified_time" content="2022-05-09T07:22:23.769Z">
 <meta property="article:author" content="Kobayakawa AMi">
+<meta property="article:tag" content="trap">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://fadingrose.github.io/">
+<link rel="canonical" href="https://fadingrose.github.io/2022/05/09/post/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'ch'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>post | Hexo</title>
   
 
 
@@ -139,9 +144,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ch">
@@ -157,10 +163,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/09/post/" class="post-title-link" itemprop="url">post</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          post
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -184,7 +189,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="简报"><a href="#简报" class="headerlink" title="简报"></a>简报</h1><p>这是一个关于Go-callvis安装的踩坑记录，虽然最终的原因已经和这个插件没关系了（</p>
+        <h1 id="简报"><a href="#简报" class="headerlink" title="简报"></a>简报</h1><p>这是一个关于Go-callvis安装的踩坑记录，虽然最终的原因已经和这个插件没关系了（</p>
 <h1 id="发生了什么？"><a href="#发生了什么？" class="headerlink" title="发生了什么？"></a>发生了什么？</h1><p>Go-callvis本身是一个Go实现的生成函数调用图的插件，根据Github上的Quick Start指引，<br>源代码下面有一个Makefile文件，借助这个文件来完成安装</p>
 <p>要求在go-callvis的源代码文件夹下执行 <code>make install</code>，此时的文件结构树有个这个东西</p>
 <p>奇怪的地方出现了，执行完后没有任何反应，go-callvis在zsh里面也没有生效。</p>
@@ -225,21 +230,26 @@
 <p>一个猜想是vscode内建的command line有额外的搜索规则，然后顺便把路径给补上了</p>
 <p>不过这也只是猜想，这包的管理和安装其实就没有弄明白过，不过没有关系，能用就行</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/trap/" rel="tag"># trap</a>
+          </div>
+
+        
+
+
+        
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -292,6 +302,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E6%8A%A5"><span class="nav-number">1.</span> <span class="nav-text">简报</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">发生了什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E6%8B%86%E5%BC%B9"><span class="nav-number">3.</span> <span class="nav-text">开始拆弹</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
