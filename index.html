@@ -145,6 +145,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ch">
+    <link itemprop="mainEntityOfPage" href="https://fadingrose.github.io/2022/05/12/Markdown-with-vscode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kobayakawa AMi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Iris">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/12/Markdown-with-vscode/" class="post-title-link" itemprop="url">Markdown with vscode</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-05-12 00:51:46 / Modified: 01:11:44" itemprop="dateCreated datePublished" datetime="2022-05-12T00:51:46+08:00">2022-05-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="利用vscode的快速补全来写Markdown"><a href="#利用vscode的快速补全来写Markdown" class="headerlink" title="利用vscode的快速补全来写Markdown"></a>利用vscode的快速补全来写Markdown</h1><p>!!! abstract Markdown支持HTML, 利用vscode的代码补全来快速嵌入它们OvO  </p>
+<p>vscode配置Snippts的位置：<code>vscode-Preference-User Snippets</code><br>在控制台中输入 <code>Markdown</code> （事实上就是指定一下语言，很好理解）</p>
+<p>自定义体长这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;Color 琉璃&quot;: &#123;</span><br><span class="line">		&quot;prefix&quot;: &quot;++b&quot;, </span><br><span class="line">		&quot;body&quot;: [</span><br><span class="line">			&quot;&lt;font color = #005CAF&gt;&quot;,</span><br><span class="line">			&quot;$1&quot;,</span><br><span class="line">			&quot;&lt;/font&gt;&quot;</span><br><span class="line">		],</span><br><span class="line">		&quot;description&quot;: &quot;set text color = #005CAF 琉璃&quot;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>prefix</code>：识别的前缀</li>
+<li><code>body</code>：替换前缀的部分，<code>$1</code>是光标位置<br>多说一句，在提示栏里显示的是这个Snippet的名字（比如上面的“Color 琉璃”）^[<font color = #005CAF>琉璃</font> 是这个颜色]</li>
+</ul>
+<p>随后在<code>.setting.json</code>中加入字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;[markdown]&quot;: &#123;</span><br><span class="line">        &quot;editor.quickSuggestions&quot;: true</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>上面那个这个自定义体写完之后默认是每个小片段换行的</p>
+<p>如果不需要换行，就把这三个部分写在一起，即</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;body&quot;: [</span><br><span class="line">	&quot;&lt;font color = #005CAF&gt;$1&lt;/font&gt;&quot;</span><br><span class="line">	]</span><br></pre></td></tr></table></figure>
+
+<p>很好理解就是了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="ch">
     <link itemprop="mainEntityOfPage" href="https://fadingrose.github.io/2022/05/09/DEFUSE#1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -305,12 +381,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
